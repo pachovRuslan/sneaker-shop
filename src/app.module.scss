@@ -1,0 +1,231 @@
+body {
+  background: rgb(178, 122, 195);
+  background-image: url(image/bg.png);
+
+
+}
+
+.header {
+  display: flex;
+  grid-template-columns: 50px 1fr 50px;
+  justify-content: space-between;
+  background: rgba(47, 3, 60, 0.786);
+  max-width: 1600px;
+  margin: auto;
+  border-radius: 30px;
+
+
+  .header_logo {
+    cursor: pointer;
+  }
+
+  .header_title {
+    display: flex;
+    max-height: 180px;
+
+  }
+
+  .header_name {
+    font-family: 'BOMBFONT TRIAL';
+    font-size: 120px;
+    color: rgb(178, 122, 195);
+    height: 50px;
+    vertical-align: top;
+    margin-top: -20px;
+
+
+  }
+
+  .header_discribe {
+    font-family: 'Streetlife';
+    font-size: 50px;
+    height: 30px;
+    vertical-align: top;
+    color: rgb(255, 255, 255);
+  }
+
+  .cart {
+    padding-top: 20px;
+    padding-right: 30px;
+    color: #fff;
+    background: rgba(47, 3, 60, 0.786);
+    border-radius: 30px;
+    width: 120px;
+    margin: 5px;
+    cursor: pointer;
+
+    .cart_button {
+      justify-content: center;
+      padding-left: 30px;
+    }
+
+    .cart_button img:hover {
+      transform: translate(-20px, 0);
+    }
+  }
+}
+
+.category {
+  max-width: 1600px;
+  height: 58px;
+  background: rgba(47, 3, 60, 0.786);
+  border-radius: 30px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 2px;
+  margin-bottom: 2px;
+
+
+  li {
+    list-style-type: none;
+
+  }
+
+  .categories {
+    display: flex;
+    margin: 2px;
+    padding: 2px;
+
+    .category_active {
+      background: rgb(178, 122, 195);
+      border-radius: 30px;
+      display: block;
+      text-align: center;
+      width: 100px;
+      height: 30px;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .category_name {
+      background: rgba(47, 3, 60, 0.786);
+      border-radius: 30px;
+      display: block;
+      text-align: center;
+      width: 100px;
+      height: 30px;
+      padding: 10px;
+      cursor: pointer;
+    }
+  }
+}
+
+.sort {
+  width: 200px;
+  background: rgba(47, 3, 60, 0.786);
+  border-radius: 30px;
+  font-size: 14px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  text-align: center;
+
+
+  li {
+    list-style-type: none;
+    display: inline;
+    cursor: pointer;
+
+  }
+}
+
+.wrapper {
+  border-radius: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 400px);
+  justify-content: center;
+  max-width: 1600px;
+  background: rgba(47, 3, 60, 0.786);
+  margin: auto;
+
+
+  .card {
+    background-image: url(image/shelf1.png);
+    width: 400px;
+    height: 400px;
+    position: relative;
+
+
+    .cart_price {
+      color: #fff;
+    }
+
+    .item {
+      position: absolute;
+      bottom: 100px;
+      padding-left: 30px;
+
+    }
+
+    .item img {
+      max-width: 280px;
+      cursor: pointer;
+    }
+
+    .item img:hover {
+      max-width: 420px;
+
+    }
+
+    .item_name {
+      position: absolute;
+      bottom: 60px;
+      left: 12px;
+      font-size: 25px;
+      color: aliceblue;
+    }
+
+    .price {
+      background-image: url(image/price.png);
+      width: 100px;
+      height: 70px;
+      position: absolute;
+      bottom: 25px;
+      right: 12px;
+      transform: skew(-18deg, 18deg);
+
+
+      .price_property {
+        padding-left: 15px;
+        padding-top: 10px;
+      }
+
+      span {
+        color: rgb(86, 22, 10);
+        font-size: 20px;
+      }
+
+      .price_add {
+        margin-left: 50px;
+        cursor: pointer;
+      }
+
+      .price_add img:hover {
+        transform: scale(1.2)
+      }
+    }
+
+    .price:hover {
+      transform: skew(0);
+    }
+  }
+}
+
+@font-face {
+  font-family: "BOMBFONT TRIAL";
+  src: url("../fonts/BOMBFONT TRIAL.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+
+  font-family: "Streetlife";
+  src: url("../fonts/Streetlife.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
