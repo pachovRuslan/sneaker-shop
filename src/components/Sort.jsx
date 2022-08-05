@@ -1,18 +1,20 @@
 import React from 'react'
-import styles from '../app.module.scss';
+import  '../app.scss';
 
-const list  = ['популярности','по убыванию цены' ,'по возростанию цены' ,'алфавиту'];
-function Sort() {
+const list  = [
+{name: 'популярности', sort:'rating'},
+{name:'цене', sort:'price' },
+{name:'алфавиту', sort:'name'}
+];
+function Sort({sortType, onClickSort}) {
   const [open, setOpen] = React.useState(false)
-  const [selected, setSelected] = React.useState(0)
-  const sortName = list[selected]
-  const onClickListItem = (index) => {
-    setSelected(index);
+  const onClickListItem = (i) => {
+    onClickSort(i);
     setOpen(false)
   }
   return (
-    <div  className={styles.sort}>
-    <div className={styles.sort__label}>
+    <div  className='sort'>
+    <div className='sort__label'>
       <svg
         width="10"
         height="6"
@@ -25,18 +27,18 @@ function Sort() {
         />
       </svg>
       <b>Сортировка по:</b><br/>
-      <span onClick={()=> setOpen(!open)}>{sortName}</span>
+      <span onClick={()=> setOpen(!open)}>{sortType.name}</span>
     </div>
     
     {open && (
-        <div className={styles.sort__popup}>
+        <div className='sort__popup'>
         <ul>
-        {list.map((value, index) => (
+        {list.map((obj, i) => (
           <li
-            key={index}
-            onClick={()=> onClickListItem(index)}
-            className={selected === index ? styles.sort_active : ''}>
-            {value}
+            key={i}
+            onClick={()=> onClickListItem(obj)}
+            className={sortType.sort === obj.sort ?'sort_active': ''}>
+            {obj.name}
           </li>
           ))}
         </ul>
