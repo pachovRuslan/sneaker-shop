@@ -350,6 +350,41 @@ body {
 
 }
 }
+.pagination {
+margin: 0 auto;
+  li {
+    display: inline-block;
+
+    
+    a {
+        text-align: center;
+        width: 45px;
+        line-height: 42px;
+        height: 45px;
+        border: 1px solid rgba(47, 3, 60, 0.786);
+        border-radius: 30px;
+        margin-left: 10px;
+        display: inline-block;
+        cursor: pointer;
+        color: #fff;
+
+        &:hover {
+            background-color: rgba(47, 3, 60, 0.786);
+            color: #fff;
+        }
+    }
+}
+
+    :global{
+    .selected {
+    a{
+    background-color: rgba(47, 3, 60, 0.786);
+    color: #fff;
+    }
+}
+
+}
+}
 
 @font-face {
   font-family: "BOMBFONT TRIAL";
