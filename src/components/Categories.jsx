@@ -2,7 +2,7 @@ import React from 'react';
 import  '../app.scss';
 import Search from './Search';
 import Sort from './Sort';
-function Categories({categoryId, onClickCategory, sortType,onClickSort, searchValue, setSearchValue}) {
+function Categories({categoryId, onClickCategory, sortType,onClickSort}) {
 
   const categories = ['Все', 'New balance', 'Nike', 'Adidas', 'Puma', 'Reebok'];
 
@@ -17,9 +17,7 @@ function Categories({categoryId, onClickCategory, sortType,onClickSort, searchVa
           </li>
         ))}
       </ul>
-      <Search    
-        searchValue={searchValue} 
-     setSearchValue={setSearchValue}/>
+      <Search />
       <Sort sortType={sortType} onClickSort={onClickSort}/>
       
     </div>
