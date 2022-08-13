@@ -10,7 +10,7 @@ function Cart() {
       </div>
       <div className="cart_items">
         <div className="cart_item">
-          <img src='' alt='cart_item' />
+          <img src="" alt="cart_item" />
           <h3> name</h3>
           <span>size</span>
           <span>delete</span>

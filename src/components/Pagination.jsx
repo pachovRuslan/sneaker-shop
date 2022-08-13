@@ -1,25 +1,22 @@
-import React from 'react'
+import React from 'react';
 import ReactPaginate from 'react-paginate';
 import '../app.scss';
 
-
-function Pagination({onChangePage}) {
-
+function Pagination({ onChangePage }) {
   return (
     <>
-
       <ReactPaginate
-      className='pagination'
+        className="pagination"
         breakLabel="..."
         nextLabel=" >"
-        onPageChange={(event)=>onChangePage(event.selected+1)}
+        onPageChange={(event) => onChangePage(event.selected + 1)}
         pageRangeDisplayed={8}
         pageCount={3}
         previousLabel="< "
         renderOnZeroPageCount={null}
       />
     </>
-  )
+  );
 }
 
-export default Pagination
+export default Pagination;
