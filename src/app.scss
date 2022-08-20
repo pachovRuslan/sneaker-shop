@@ -330,20 +330,20 @@ body {
   }
 }
 .search_block{
-  border-radius: 30px;
-  background: rgba(47, 3, 60, 0.786);
-  width: 250px;
+
+
   z-index: 100;
   padding-left: 10px;
   margin: 3px;
   input{
-    background:rgba(255, 255, 255, 0);
+    background: rgba(47, 3, 60, 0.786);
     border: none;
     border-radius: 30px;
     color:#fff;
-    width: 210px;
+    width: 250px;
     height: 50px;
     font-size: 16px;
+    padding-left: 18px ;
     
   }
 .close_img{

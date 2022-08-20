@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 import '../app.scss';
 import logo from '../assets/image/logo.png';
 import cart from '../assets/image/cart1.png';
+import { useSelector } from 'react-redux';
 function Header() {
+  const { items, totalPrice } = useSelector((state) => state.cartSlice);
   return (
     <div className="header">
-      <Link to="/">
+      <Link to="/sneaker-shop/">
         <div className="header_logo">
           <img width={120} height={160} src={logo} alt="logo" />
         </div>
@@ -22,8 +24,9 @@ function Header() {
         <div className="cart_button">
           <Link to="/cart">
             <img width={80} height={80} src={cart} alt="cart"></img>
-            <span>totalPrice $</span>
           </Link>
+          <p>{totalPrice} $</p>
+          <p>{items.length} шт</p>
         </div>
       </div>
     </div>

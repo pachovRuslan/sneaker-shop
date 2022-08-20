@@ -11,13 +11,25 @@ const list = [
 function Sort() {
   const [open, setOpen] = React.useState(false);
   const dispatch = useDispatch();
+  const sortRef = React.useRef();
   const sort = useSelector((state) => state.filterSlice.sort);
   const onClickListItem = (obj) => {
     dispatch(setSort(obj));
     setOpen(false);
   };
+  React.useEffect(() => {
+    const handleClickOutside = (event) => {
+      const _event = event;
+      if (sortRef.current && !_event.path.includes(sortRef.current)) {
+        setOpen(false);
+      }
+    };
+
+    document.body.addEventListener('click', handleClickOutside);
+    return () => document.body.removeEventListener('click', handleClickOutside);
+  }, []);
   return (
-    <div className="sort">
+    <div ref={sortRef} className="sort">
       <div className="sort__label">
         <svg
           width="10"

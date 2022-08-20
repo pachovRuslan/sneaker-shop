@@ -11,15 +11,12 @@ function App() {
   console.log(searchValue);
   return (
     <div className="wrapper">
-    <SearchContext.Provider value={{searchValue, setSearchValue}}>
-      <Header />
-      <Routes>
-        <Route
-          path="/"
-          element={<Home />}
-        />
-        <Route path="/cart" element={<Cart />} />
-      </Routes>
+      <SearchContext.Provider value={{ searchValue, setSearchValue }}>
+        <Header />
+        <Routes>
+          <Route path="/sneaker-shop" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
       </SearchContext.Provider>
     </div>
   );
