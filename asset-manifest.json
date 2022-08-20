@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/sneaker-shop/static/css/main.df2c51ba.css",
+    "main.js": "/sneaker-shop/static/js/main.702423fe.js",
+    "static/media/bg.png": "/sneaker-shop/static/media/bg.5823c93aa870fc4ceb88.png",
+    "static/media/logo.png": "/sneaker-shop/static/media/logo.2f2a19242dba312594e7.png",
+    "static/media/Streetlife.ttf": "/sneaker-shop/static/media/Streetlife.9e9a7f7fb095aca7ccaa.ttf",
+    "static/media/BOMBFONT TRIAL.ttf": "/sneaker-shop/static/media/BOMBFONT TRIAL.b30bf538763da0a8cc66.ttf",
+    "static/media/shelf1.png": "/sneaker-shop/static/media/shelf1.936305ac5ac1829ba2a8.png",
+    "index.html": "/sneaker-shop/index.html",
+    "main.df2c51ba.css.map": "/sneaker-shop/static/css/main.df2c51ba.css.map",
+    "main.702423fe.js.map": "/sneaker-shop/static/js/main.702423fe.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.df2c51ba.css",
+    "static/js/main.702423fe.js"
+  ]
+}
