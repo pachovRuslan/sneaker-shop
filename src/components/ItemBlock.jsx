@@ -2,7 +2,7 @@ import React from 'react';
 import '../app.scss';
 import add from '../assets/image/added.png';
 import plus from '../assets/image/plus.png';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addItem, removeItem } from '../redux/slices/cartSlice'
 function ItemBlock({ imageUrl, name, price, id }) {
   const [isAdded, setIsAdded] = React.useState(false);
@@ -16,10 +16,8 @@ function ItemBlock({ imageUrl, name, price, id }) {
     setIsAdded(!isAdded);
   }
   const onClickRemove = () => {
-    const item = {
-      id, name, price, imageUrl,
-    };
-    dispatch(removeItem(item))
+    if(window.confirm('Are you sure you want to remove?'))
+    dispatch(removeItem(id))
     
   }
   return (
