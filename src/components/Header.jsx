@@ -4,8 +4,9 @@ import '../app.scss';
 import logo from '../assets/image/logo.png';
 import cart from '../assets/image/cart1.png';
 import { useSelector } from 'react-redux';
+import { selectCart } from '../redux/slices/cartSlice';
 function Header() {
-  const { items, totalPrice } = useSelector((state) => state.cartSlice);
+  const { items, totalPrice } = useSelector(selectCart);
   return (
     <div className="header">
       <Link to="/sneaker-shop/">

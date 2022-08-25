@@ -1,5 +1,6 @@
 import React from 'react';
 import '../app.scss';
+import { Link } from 'react-router-dom';
 import add from '../assets/image/added.png';
 import plus from '../assets/image/plus.png';
 import { useDispatch } from 'react-redux';
@@ -23,7 +24,7 @@ function ItemBlock({ imageUrl, name, price, id }) {
   return (
     <div className="card">
       <div className="item">
-        <img src={imageUrl} alt="item" />
+       <Link to={`/sneaker/${id}`}> <img src={imageUrl} alt="item" /></Link>
       </div>
       <div className="item_name">
         <span> {name}</span>
